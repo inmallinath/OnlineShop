@@ -2,12 +2,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace OnlineShop
 {
-    public class TourController : Controller
+    public class ToursController : Controller
     {
         private readonly ITourRepository _tourRepository;
         private readonly ICategoryRepository _categoryRepository;
 
-        public TourController(ITourRepository tourRepository, ICategoryRepository categoryRepository)
+        public ToursController(ITourRepository tourRepository, ICategoryRepository categoryRepository)
         {
             _tourRepository = tourRepository;
             _categoryRepository = categoryRepository;
