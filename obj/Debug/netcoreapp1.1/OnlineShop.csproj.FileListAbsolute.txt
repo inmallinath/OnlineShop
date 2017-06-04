@@ -1,0 +1,8 @@
+/Users/Mallinath/WebApps/OnlineShop/bin/Debug/netcoreapp1.1/OnlineShop.deps.json
+/Users/Mallinath/WebApps/OnlineShop/bin/Debug/netcoreapp1.1/OnlineShop.runtimeconfig.json
+/Users/Mallinath/WebApps/OnlineShop/bin/Debug/netcoreapp1.1/OnlineShop.runtimeconfig.dev.json
+/Users/Mallinath/WebApps/OnlineShop/bin/Debug/netcoreapp1.1/OnlineShop.dll
+/Users/Mallinath/WebApps/OnlineShop/bin/Debug/netcoreapp1.1/OnlineShop.pdb
+/Users/Mallinath/WebApps/OnlineShop/obj/Debug/netcoreapp1.1/OnlineShop.AssemblyInfo.cs
+/Users/Mallinath/WebApps/OnlineShop/obj/Debug/netcoreapp1.1/OnlineShop.dll
+/Users/Mallinath/WebApps/OnlineShop/obj/Debug/netcoreapp1.1/OnlineShop.pdb
