@@ -8,9 +8,9 @@ namespace OnlineShop
     {
         private InMemoryCategoryRepository _categoryRepository;
 
-        public InMemoryTourRepository(InMemoryCategoryRepository CategoryRepository)
+        public InMemoryTourRepository(InMemoryCategoryRepository categoryRepository)
         {
-            _categoryRepository = CategoryRepository;
+            _categoryRepository = categoryRepository;
         }
 
         public IEnumerable<Tour> Tours => new List<Tour>{
