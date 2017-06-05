@@ -31,7 +31,13 @@ namespace OnlineShop
                         Price = 3275.80M, Category = _categoryRepository.Categories.ToList()[2],
                         ImageUrl="https://upload.wikimedia.org/wikipedia/commons/c/ca/Nickelback_%40_Perth_Arena_%2817_11_2012%29_%288261243464%29.jpg",
                         SeatsAvailable = true, IsTourOfTheWeek = false,
-                        ImageThumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/c/ca/Nickelback_%40_Perth_Arena_%2817_11_2012%29_%288261243464%29.jpg"}
+                        ImageThumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/c/ca/Nickelback_%40_Perth_Arena_%2817_11_2012%29_%288261243464%29.jpg"},
+            new Tour{TourId = 4, Name = "Hare Rama Hare Krishna", ShortDescription = "Seek spirituality with a visit to the societies of Hare Rama and Hare Krishna in North America",
+                        LongDescription = "Ut magna nunc, rutrum et leo non, commodo scelerisque neque. Nulla et purus eu tellus iaculis placerat. Nulla eleifend gravida nisi non aliquet. Morbi sit amet quam egestas, efficitur erat eget, bibendum turpis. Aliquam erat volutpat.",
+                        Price = 1875.35M, Category = _categoryRepository.Categories.ToList()[3],
+                        ImageUrl="https://upload.wikimedia.org/wikipedia/commons/4/44/Hare_Krishna_in_Helsinki_C_IMG_8105.JPG",
+                        SeatsAvailable = true, IsTourOfTheWeek = false,
+                        ImageThumbnailUrl = "https://upload.wikimedia.org/wikipedia/commons/4/44/Hare_Krishna_in_Helsinki_C_IMG_8105.JPG"}
         };
 
         public IEnumerable<Tour> TourOfTheWeek => throw new NotImplementedException();

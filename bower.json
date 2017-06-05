@@ -1,0 +1,24 @@
+{
+  "name": "OnlineShop",
+  "homepage": "https://github.com/inmallinath/OnlineShop",
+  "authors": [
+    "Mallinath Nagaraj <mallinathin@gmail.com>"
+  ],
+  "description": "OnlineShop for Tours",
+  "main": "",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.7"
+  }
+}
