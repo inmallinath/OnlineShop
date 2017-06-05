@@ -1,0 +1,21 @@
+@model OnlineShop.ViewModels.ToursListViewModel
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, intial-scale=1">
+        <title>Online Shop - Tours</title>
+    </head>
+    <body>
+        <h1>@Model.CurrentCategory</h1>
+        @foreach(var tour in Model.Tours)
+        {
+            <div>
+                <h2>@tour.Name</h2>
+                <h3>@tour.Price.ToString("c")</h3>
+                <h4>@tour.Category.CategoryName</h4>
+            </div>
+        }
+    </body>
+</html>

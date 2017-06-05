@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using OnlineShop.ViewModels;
 
 namespace OnlineShop
 {
@@ -15,7 +16,11 @@ namespace OnlineShop
 
         public ViewResult TourList()
         {
-            return View(_tourRepository.Tours);
+            ToursListViewModel toursList = new ToursListViewModel();
+            toursList.Tours = _tourRepository.Tours;
+            //Test the Model's Current Category
+            toursList.CurrentCategory = "Adventure";
+            return View(toursList);
         }
     }
 }

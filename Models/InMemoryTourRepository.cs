@@ -6,9 +6,9 @@ namespace OnlineShop
 {
     public class InMemoryTourRepository : ITourRepository
     {
-        private InMemoryCategoryRepository _categoryRepository;
+        private ICategoryRepository _categoryRepository;
 
-        public InMemoryTourRepository(InMemoryCategoryRepository categoryRepository)
+        public InMemoryTourRepository(ICategoryRepository categoryRepository)
         {
             _categoryRepository = categoryRepository;
         }
