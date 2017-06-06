@@ -31,8 +31,11 @@ namespace OnlineShop
             pgsqlConnectionString = _configuration["Data:pgsqlConnectionString"];
             services.AddDbContext<AppDbContext>(options => 
                 options.UseNpgsql(pgsqlConnectionString));
-            services.AddTransient<ICategoryRepository, InMemoryCategoryRepository>();
-            services.AddTransient<ITourRepository, InMemoryTourRepository>();
+            // services.AddTransient<ICategoryRepository, InMemoryCategoryRepository>();
+            // services.AddTransient<ITourRepository, InMemoryTourRepository>();
+            // Commenting the above lines as we now use the DB repositories as below:
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<ITourRepository, TourRepository>();
             services.AddMvc();
         }
 
