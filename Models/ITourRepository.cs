@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace OnlineShop
+namespace OnlineShop.Models
 {
     public interface ITourRepository
     {

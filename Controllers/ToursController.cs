@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using OnlineShop.Models;
 using OnlineShop.ViewModels;
 
-namespace OnlineShop
+namespace OnlineShop.Controllers
 {
     public class ToursController : Controller
     {

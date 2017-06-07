@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using OnlineShop.Models;
 
 namespace OnlineShop.ViewModels
 {

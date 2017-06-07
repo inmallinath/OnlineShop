@@ -1,4 +1,4 @@
-namespace OnlineShop
+namespace OnlineShop.Models
 {
     public class Tour
     {

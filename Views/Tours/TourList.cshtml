@@ -2,14 +2,5 @@
     <h1>@Model.CurrentCategory</h1>
     @foreach(var tour in Model.Tours)
     {
-        <div class="col-sm-4 col-lg-4 col-md-4">
-            <div class="thumbnail">
-                <img src="@tour.ImageThumbnailUrl" alt="">
-                <div class="caption">
-                    <h4 class="pull-right">@tour.Price.ToString("c")</h4>
-                    <h3><a>@tour.Name</a></h3>
-                    <p>@tour.ShortDescription</p>
-                </div>
-            </div>
-        </div>
+        @Html.Partial("TourSummary", tour);
     }

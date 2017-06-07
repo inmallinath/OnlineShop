@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OnlineShop
+namespace OnlineShop.Models
 {
     public class InMemoryTourRepository : ITourRepository
     {
