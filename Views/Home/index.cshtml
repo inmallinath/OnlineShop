@@ -1,0 +1,13 @@
+@model HomeViewModel
+
+@await Html.PartialAsync("Carousel")
+
+<h2>Tours of the Week</h2>
+<h4>Best Tours for the week</h4>
+
+<div class="row">
+    @foreach (var tour in Model.TourOfTheWeek)
+    {
+        @Html.Partial("TourOfTheWeek", tour)
+    }
+</div>
