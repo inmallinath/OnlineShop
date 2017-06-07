@@ -36,6 +36,8 @@ namespace OnlineShop
             // Commenting the above lines as we now use the DB repositories as below:
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<ITourRepository, TourRepository>();
+            services.AddMemoryCache();
+            services.AddSession();
             services.AddMvc();
         }
 
@@ -50,6 +52,7 @@ namespace OnlineShop
             }
             app.UseStatusCodePages();
             app.UseStaticFiles();
+            app.UseSession();
             app.UseMvcWithDefaultRoute();
 
             DbInitializer.Seed(app);
