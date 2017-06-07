@@ -10691,6 +10691,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v1.1": [
       "Microsoft.AspNetCore >= 1.1.1",
+      "Microsoft.AspNetCore.Http.Extensions >= 1.1.1",
       "Microsoft.AspNetCore.Mvc >= 1.1.1",
       "Microsoft.AspNetCore.Razor.Tools >= 1.1.0-preview4-final",
       "Microsoft.AspNetCore.Session >= 1.1.1",
@@ -10770,6 +10771,10 @@
             "version": "1.1.1"
           },
           "Microsoft.Extensions.Caching.Memory": {
+            "target": "Package",
+            "version": "1.1.1"
+          },
+          "Microsoft.AspNetCore.Http.Extensions": {
             "target": "Package",
             "version": "1.1.1"
           }

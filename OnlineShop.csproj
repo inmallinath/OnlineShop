@@ -17,6 +17,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="1.1.1"/>
     <PackageReference Include="Microsoft.AspNetCore.Session" Version="1.1.1"/>
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="1.1.1"/>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="1.1.1"/>
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="1.0.0"/>

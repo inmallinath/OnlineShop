@@ -36,9 +36,11 @@ namespace OnlineShop
             // Commenting the above lines as we now use the DB repositories as below:
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<ITourRepository, TourRepository>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<TourCart>(sp=>TourCart.Get(sp));
+            services.AddMvc();
             services.AddMemoryCache();
             services.AddSession();
-            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
