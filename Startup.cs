@@ -51,6 +51,8 @@ namespace OnlineShop
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
+
+            DbInitializer.Seed(app);
             // app.Run(async (context) =>
             // {
             //     await context.Response.WriteAsync("Hello World!");

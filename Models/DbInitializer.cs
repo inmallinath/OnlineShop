@@ -7,12 +7,10 @@ namespace OnlineShop.Models
 {
     public static class DbInitializer
     {
-        public static void seed(IApplicationBuilder appBuilder)
+        public static void Seed(IApplicationBuilder appBuilder)
         {
             AppDbContext context = appBuilder.ApplicationServices
                                    .GetRequiredService<AppDbContext>();
-
-            
             
             if(!context.Categories.Any())
             {
