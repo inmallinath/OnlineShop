@@ -12,5 +12,6 @@ namespace OnlineShop.Models
         public DbSet<Category> Categories { get; set; }
         public DbSet<Tour> Tours { get; set; }
         
+        public DbSet<ShoppedTour> ShoppedTours { get; set; }
     }
 }
