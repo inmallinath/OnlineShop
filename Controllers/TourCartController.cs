@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using OnlineShop.Models;
+using OnlineShop.ViewModels;
 
 namespace OnlineShop.Controllers
 {
@@ -12,6 +13,20 @@ namespace OnlineShop.Controllers
         {
             _tourRepository = tourRepository;
             _tourCart = tourCart;
+        }
+
+        public ViewResult Index()
+        {
+            var tours = _tourCart.GetShoppedTours();
+            _tourCart.ShoppedTours = tours;
+
+            var cartViewModel = new TourCartViewModel
+            {
+                TourCart = _tourCart,
+                CartTotal = _tourCart.GetCartTotal()
+            };
+            
+            return View(cartViewModel);
         }
     }
 }

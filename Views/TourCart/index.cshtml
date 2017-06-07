@@ -1,0 +1,29 @@
+@model TourCartViewModel
+
+<h2>Your Selected Tours</h2>
+<h4>Here are the tours you have shopped</h4>
+<table class="table table-bordered table-striped">
+    <thead>
+        <th>Quantity</th>
+        <th>Tour</th>
+        <th class="text-right">Price</th>
+        <th class="text-right">SubTotal</th>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.TourCart.ShoppedTours)
+        {
+            <tr>
+                <td class="text-center">@item.Amount</td>
+                <td class="text-left">@item.Tour.Name</td>
+                <td class="text-right">@item.Tour.Price.ToString("c")</td>
+                <td class="text-right">@((item.Amount * item.Tour.Price).ToString("c"))</td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right">Total:</td>
+            <td class="class-right">@Model.CartTotal.ToString("c")</td>
+        </tr>
+    </tfoot>
+</table>

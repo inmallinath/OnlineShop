@@ -96,5 +96,12 @@ namespace OnlineShop.Models
             _appContext.ShoppedTours.RemoveRange(shoppedTours);
             _appContext.SaveChanges();
         }
+
+        public decimal GetCartTotal()
+        {
+            return _appContext.ShoppedTours
+                        .Where(t => t.TourCartId == TourCartId)
+                        .Select(st=>st.Tour.Price * st.Amount).Sum();
+        }
     }
 }
