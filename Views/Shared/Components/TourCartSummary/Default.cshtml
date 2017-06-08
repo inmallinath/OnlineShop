@@ -1,0 +1,13 @@
+@model TourCartViewModel
+
+@if (Model.TourCart.ShoppedTours.Count > 0)
+{
+    <li>
+        <a>
+            <span class="glyphicon glyphicon-shopping-cart"></span>
+            <span id="cart-status">
+                @Model.TourCart.ShoppedTours.Count
+            </span>
+        </a>
+    </li>
+}
