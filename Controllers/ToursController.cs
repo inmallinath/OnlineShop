@@ -39,5 +39,15 @@ namespace OnlineShop.Controllers
                 CurrentCategory = _category
             });
         }
+
+        public IActionResult Details(int id)
+        {
+            var tour = _tourRepository.GetTourById(id);
+            if (tour == null)
+            {
+                return NotFound();
+            }
+            return View(tour);
+        }
     }
 }
