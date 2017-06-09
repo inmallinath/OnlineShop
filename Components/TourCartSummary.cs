@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using OnlineShop.Models;
 using OnlineShop.ViewModels;
@@ -15,7 +16,13 @@ namespace OnlineShop.Components
 
         public IViewComponentResult Invoke()
         {
-            var tours = _tourCart.GetShoppedTours();
+            //var tours = _tourCart.GetShoppedTours();
+            //mock data
+            var tours = new List<ShoppedTour>()
+                        {
+                            new ShoppedTour(),
+                            new ShoppedTour()
+                        };
             _tourCart.ShoppedTours = tours;
 
             var tourCartViewModel = new TourCartViewModel
