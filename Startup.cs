@@ -38,6 +38,7 @@ namespace OnlineShop
             services.AddTransient<ITourRepository, TourRepository>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<TourCart>(sp=>TourCart.Get(sp));
+            services.AddTransient<IOrderRepository, OrderRepository>();
             services.AddMvc();
             services.AddMemoryCache();
             services.AddSession();
