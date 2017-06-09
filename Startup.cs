@@ -58,6 +58,12 @@ namespace OnlineShop
             // app.UseMvcWithDefaultRoute();
             app.UseMvc(routes => {
                 routes.MapRoute(
+                    name: "viewByCategory",
+                    template: "Tours/{action}/{category?}",
+                    defaults: new { controller = "Tours", action = "TourList"}
+                );
+
+                routes.MapRoute(
                     name: "default",
                     template:"{controller=Home}/{action=Index}/{id?}"
                 );
