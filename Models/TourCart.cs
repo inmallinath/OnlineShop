@@ -22,7 +22,7 @@ namespace OnlineShop.Models
 
         public static TourCart Get(IServiceProvider services)
         {
-            ISession session = services.GetRequiredService<HttpContextAccessor>()
+            ISession session = services.GetRequiredService<IHttpContextAccessor>()
                                     ?.HttpContext.Session;
             
             var context = services.GetService<AppDbContext>();
