@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace OnlineShop.Models
@@ -17,5 +18,6 @@ namespace OnlineShop.Models
         public string Phone { get; set; }
         public string Email { get; set; }
         public decimal OrderTotal { get; set; }
+        public DateTime OrderPlaced { get; set;}
     }
 }
