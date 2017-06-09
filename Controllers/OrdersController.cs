@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using OnlineShop.Models;
 
 namespace OnlineShop.Controllers
@@ -16,6 +17,32 @@ namespace OnlineShop.Controllers
 
         public IActionResult CheckOut()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CheckOut(Order order)
+        {
+            var tours = _tourCart.GetShoppedTours();
+            _tourCart.ShoppedTours = tours;
+
+            if (_tourCart.ShoppedTours.Count == 0)
+            {
+                ModelState.AddModelError("","No tours in your cart. Please select some before your check out");
+            }
+
+            if (ModelState.IsValid)
+            {
+                _orderRepository.AddOrder(order);
+                _tourCart.ClearCart();
+                return RedirectToAction("PostCheckOut");
+            }
+            return View(order);
+        }
+
+        public IActionResult PostCheckOut()
+        {
+            ViewBag.PostCheckOutMessage = "Pack your bags. You are all set!!!";
             return View();
         }
     }
