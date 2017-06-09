@@ -1,3 +1,4 @@
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using OnlineShop.Models;
 using OnlineShop.ViewModels;
@@ -27,6 +28,16 @@ namespace OnlineShop.Controllers
             };
             
             return View(cartViewModel);
+        }
+
+        public RedirectToActionResult AddToTourCart(int tourId)
+        {
+            var selectedTour = _tourRepository.Tours.FirstOrDefault(t=>t.TourId == tourId);
+            if (selectedTour != null)
+            {
+                _tourCart.AddToCart(selectedTour, 1);
+            }
+            return RedirectToAction("Index");
         }
     }
 }
