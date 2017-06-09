@@ -4,16 +4,22 @@
         asp-action="CheckOut" 
         method="post" role="form">
 <h4>The time is NOW - Order your dream tour!</h4>
+
+    <div class="text-danger" asp-validation-summary="All">
+    </div>
+
     <div class="form-group">
         <label asp-for="LastName" class="col-md-2 control-label"></label>
         <div class="col-md-5">
             <input asp-for="LastName" class="form-control"  />
+            <span class="text-danger" asp-validation-for="LastName"></span>
         </div>
     </div>
     <div class="form-group">
         <label asp-for="FirstName" class="col-md-2 control-label"></label>
         <div class="col-md-5">
             <input asp-for="FirstName" class="form-control" />
+            <span class="text-danger" asp-validation-for="FirstName"></span>
         </div>
     </div>
 
@@ -21,6 +27,7 @@
         <label asp-for="AddressLine1" class="col-md-2 control-label"></label>
         <div class="col-md-5">
             <input asp-for="AddressLine1" class="form-control" />
+            <span class="text-danger" asp-validation-for="AddressLine1"></span>
         </div>
     </div>
 
@@ -28,6 +35,7 @@
         <label asp-for="AddressLine2" class="col-md-2 control-label"></label>
         <div class="col-md-5">
             <input asp-for="AddressLine2" class="form-control" />
+            <span class="text-danger" asp-validation-for="AddressLine2"></span>
         </div>
     </div>
 
@@ -35,6 +43,7 @@
         <label asp-for="PostalCode" class="col-md-2 control-label"></label>
         <div class="col-md-5">
             <input asp-for="PostalCode" class="form-control" />
+            <span class="text-danger" asp-validation-for="PostalCode"></span>
         </div>
     </div>
 
@@ -42,6 +51,7 @@
         <label asp-for="City" class="col-md-2 control-label"></label>
         <div class="col-md-5">
             <input asp-for="City" class="form-control" />
+            <span class="text-danger" asp-validation-for="City"></span>
         </div>
     </div>
 
@@ -49,6 +59,7 @@
         <label asp-for="Province" class="col-md-2 control-label"></label>
         <div class="col-md-5">
             <input asp-for="Province" class="form-control" />
+            <span class="text-danger" asp-validation-for="Province"></span>
         </div>
     </div>
 
@@ -56,6 +67,7 @@
         <label asp-for="Country" class="col-md-2 control-label"></label>
         <div class="col-md-5">
             <input asp-for="Country" class="form-control" />
+            <span class="text-danger" asp-validation-for="Country"></span>
         </div>
     </div>
 
@@ -63,6 +75,7 @@
         <label asp-for="Phone" class="col-md-2 control-label"></label>
         <div class="col-md-5">
             <input asp-for="Phone" class="form-control" />
+            <span class="text-danger" asp-validation-for="Phone"></span>
         </div>
     </div>
 
@@ -70,6 +83,7 @@
         <label asp-for="Email" class="col-md-2 control-label"></label>
         <div class="col-md-5">
             <input asp-for="Email" class="form-control" />
+            <span class="text-danger" asp-validation-for="Email"></span>
         </div>
     </div>
 
