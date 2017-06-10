@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
@@ -6,6 +7,7 @@ using OnlineShop.ViewModels;
 
 namespace OnlineShop.Controllers
 {
+    [Authorize]
     public class AccountController : Controller
     {
         private readonly UserManager<IdentityUser> _userManager;
@@ -17,7 +19,7 @@ namespace OnlineShop.Controllers
             _userManager = userManager;
             _signInManager = signInManager;
         }
-
+        [AllowAnonymous]
         public IActionResult Login(string returnUrl)
         {
             return View(new LoginViewModel
@@ -27,6 +29,7 @@ namespace OnlineShop.Controllers
         }
 
         [HttpPost()]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(LoginViewModel loginViewModel)
         {
             if (!ModelState.IsValid)
@@ -51,7 +54,7 @@ namespace OnlineShop.Controllers
             ModelState.AddModelError("", "Username/password not found");
             return View(loginViewModel);
         }
-
+        [AllowAnonymous]
         public IActionResult Register()
         {
             return View();

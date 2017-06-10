@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using OnlineShop.Models;
@@ -14,13 +15,14 @@ namespace OnlineShop.Controllers
             _orderRepository = orderRepository;
             _tourCart = tourCart;
         }
-
+        [Authorize]
         public IActionResult CheckOut()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize]
         public IActionResult CheckOut(Order order)
         {
             var tours = _tourCart.GetShoppedTours();
