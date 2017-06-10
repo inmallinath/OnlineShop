@@ -1,7 +1,7 @@
 @using Microsoft.AspNetCore.Identity
 @using Microsoft.AspNetCore.Identity.EntityFrameworkCore
 
-@Inject SignInManager<IdentityUser> SignInManager
+@inject SignInManager<IdentityUser> SignInManager
 
 @if (SignInManager.IsSignedIn(User))
 {
@@ -9,7 +9,7 @@
         method="post" class="navbar-right">
         <ul class="nav navbar-nav navbar-right">
             <li>
-                <a href="javascript.document.getElementById('logoutForm').submit()">Log Off</a>
+                <a href="javascript:document.getElementById('logoutForm').submit()">Log Off</a>
             </li>
         </ul>
     </form>
@@ -18,12 +18,12 @@ else
 {
     <ul class="nav navbar-nav navbar-right">
         <li>
-            <a href="" id="registerLink" 
+            <a id="registerLink" 
                     asp-controller="Account" 
                     asp-action="Register">Register</a>
         </li>
         <li>
-            <a href="" id="loginLink" 
+            <a id="loginLink" 
                     asp-controller="Account" 
                     asp-action="Login">Login</a>
         </li>

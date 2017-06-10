@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using OnlineShop.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace OnlineShop
 {
@@ -38,6 +39,14 @@ namespace OnlineShop
             services.AddIdentity<IdentityUser, IdentityRole>()
                     .AddEntityFrameworkStores<AppDbContext>()
                     .AddDefaultTokenProviders();
+            
+            // services.Configure<IdentityOptions>(options => {
+            //     options.Password.RequireDigit = false;
+            //     options.Password.RequiredLength = 6;
+            //     options.Password.RequireLowercase = false;
+            //     options.Password.RequireNonAlphanumeric = false;
+            //     options.Password.RequireUppercase = false;                
+            // });
             
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<ITourRepository, TourRepository>();
