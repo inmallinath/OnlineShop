@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using OnlineShop.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace OnlineShop
 {
@@ -34,6 +35,9 @@ namespace OnlineShop
             // services.AddTransient<ICategoryRepository, InMemoryCategoryRepository>();
             // services.AddTransient<ITourRepository, InMemoryTourRepository>();
             // Commenting the above lines as we now use the DB repositories as below:
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                    .AddEntityFrameworkStores<AppDbContext>();
+            
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<ITourRepository, TourRepository>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -56,6 +60,7 @@ namespace OnlineShop
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseSession();
+            app.UseIdentity();
             // app.UseMvcWithDefaultRoute();
             app.UseMvc(routes => {
                 routes.MapRoute(
