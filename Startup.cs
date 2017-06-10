@@ -66,8 +66,13 @@ namespace OnlineShop
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseStatusCodePages();
             }
-            app.UseStatusCodePages();
+            else
+            {
+                app.UseExceptionHandler("/Exceptions");
+            }
+            
             app.UseStaticFiles();
             app.UseSession();
             app.UseIdentity();
