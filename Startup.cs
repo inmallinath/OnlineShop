@@ -36,7 +36,8 @@ namespace OnlineShop
             // services.AddTransient<ITourRepository, InMemoryTourRepository>();
             // Commenting the above lines as we now use the DB repositories as below:
             services.AddIdentity<IdentityUser, IdentityRole>()
-                    .AddEntityFrameworkStores<AppDbContext>();
+                    .AddEntityFrameworkStores<AppDbContext>()
+                    .AddDefaultTokenProviders();
             
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<ITourRepository, TourRepository>();
