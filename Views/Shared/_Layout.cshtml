@@ -28,6 +28,7 @@
                         <li><a asp-controller="Contact" asp-action="Index">Contact Me</a></li>
                         @await Component.InvokeAsync("TourCartSummary")
                     </ul>
+                    @await Html.PartialAsync("LoginPartial")
                 </div>
             </div>
         </nav>
